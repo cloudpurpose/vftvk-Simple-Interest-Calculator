@@ -5,7 +5,7 @@ function compute()
     var principal = document.getElementById("principal").value;
     principal = Number(principal);
     var rate = document.getElementById("rate").value;
-    rate = Number(rate);
+    rate = parseFloat(rate);
     var years = document.getElementById("years").value;
     years = Number(years);
     var interest = principal * years * rate / 100;
