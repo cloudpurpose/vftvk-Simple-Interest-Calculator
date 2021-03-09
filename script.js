@@ -19,7 +19,7 @@ function compute()
         var output = "If you deposit <mark>" + principal + "</mark>,<br/>" + "at an interest rate of <mark>" + interest + "</mark>%,<br/>" + "You will receive an amount of <mark>" + total + "</mark>,<br/> in the year <mark>" + futureYear + "</mark>";
 
         result.innerHTML = output;
-        
+    
     }
 
 }
