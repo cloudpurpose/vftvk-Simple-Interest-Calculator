@@ -7,20 +7,20 @@ function compute()
     var years = document.getElementById("years").value;
     var interest = principal * years * rate / 100;
 
-    if (validatePrincipal() != true) {
-        break;
+    if (validatePrincipal() === true) {
+
+        var currentDate = new Date();
+        var currentYear = currentDate.getFullYear();
+        var futureYear = currentYear + years;
+
+        var total = principal * years * rate;
+        var result = document.getElementById("result");
+
+        var output = "If you deposit <mark>" + principal + "</mark>,<br/>" + "at an interest rate of <mark>" + interest + "</mark>%,<br/>" + "You will receive an amount of <mark>" + total + "</mark>,<br/> in the year <mark>" + futureYear + "</mark>";
+
+        result.innerHTML = output;
+        
     }
-
-    var currentDate = new Date();
-    var currentYear = currentDate.getFullYear();
-    var futureYear = currentYear + years;
-
-    var total = principal * years * rate;
-    var result = document.getElementById("result");
-
-    var output = "If you deposit <mark>" + principal + "</mark>,<br/>" + "at an interest rate of <mark>" + interest + "</mark>%,<br/>" + "You will receive an amount of <mark>" + total + "</mark>,<br/> in the year <mark>" + futureYear + "</mark>";
-
-    result.innerHTML = output;
 
 }
         
