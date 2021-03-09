@@ -18,10 +18,9 @@ function compute()
 
         var futureYear = currentYear + years;
 
-        var total = principal * years * rate;
         var result = document.getElementById("result");
 
-        var output = "If you deposit <mark>" + principal + "</mark>,<br/>" + "at an interest rate of <mark>" + interest + "</mark>%,<br/>" + "You will receive an amount of <mark>" + total + "</mark>,<br/> in the year <mark>" + futureYear + "</mark>";
+        var output = "If you deposit <mark>" + principal + "</mark>,<br/>" + "at an interest rate of <mark>" + rate + "</mark>%,<br/>" + "You will receive an amount of <mark>" + interest + "</mark>,<br/> in the year <mark>" + futureYear + "</mark>";
 
         result.innerHTML = output;
     
