@@ -7,6 +7,10 @@ function compute()
     var years = document.getElementById("years").value;
     var interest = principal * years * rate / 100;
 
+    if (validatePrincipal() != true) {
+        break;
+    }
+
     var currentDate = new Date();
     var currentYear = currentDate.getFullYear();
     var futureYear = currentYear + years;
@@ -34,5 +38,7 @@ function validatePrincipal()
         if (confirm(errorMessage)) {
             document.getElementById("principal").focus();
         }
+    } else {
+        return true;
     }
 }
