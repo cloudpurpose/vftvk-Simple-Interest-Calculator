@@ -11,6 +11,10 @@ function compute()
 
         var currentDate = new Date();
         var currentYear = currentDate.getFullYear();
+
+        years = Number(years);
+        currentYear = Number(years);
+
         var futureYear = currentYear + years;
 
         var total = principal * years * rate;
