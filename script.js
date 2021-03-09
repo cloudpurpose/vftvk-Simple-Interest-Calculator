@@ -3,17 +3,18 @@ function compute()
     p = document.getElementById("principal").value;
 
     var principal = document.getElementById("principal").value;
+    principal = Number(principal);
     var rate = document.getElementById("rate").value;
+    rate = Number(rate);
     var years = document.getElementById("years").value;
+    years = Number(years);
     var interest = principal * years * rate / 100;
 
     if (validatePrincipal() === true) {
 
         var currentDate = new Date();
         var currentYear = currentDate.getFullYear();
-
-        years = Number(years);
-        currentYear = Number(years);
+        currentYear = Number(currentYear);
 
         var futureYear = currentYear + years;
 
